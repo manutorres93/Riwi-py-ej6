@@ -1,14 +1,24 @@
 #ALGORITMO PARA ESTUDIANTES
-def create ():
+def create_students ():
     students_list=[]
     notes_list=[]
     cant= int (input("Ingrese la cantidad de estudiantes: "))
 
     for x in range (cant):
         students_list.append(input("Digite el nombre del estudiante: "))
-        notes_list.append(float(input("Digite la nota del estudiante ingresado: ")))
-    
+
+        nota_1= float(input("Digite la nota 1 del estudiante "))
+        nota_2= float(input("Digite la nota 2 del estudiante "))
+        nota_3= float(input("Digite la nota 3 del estudiante "))
+
+        promedio_nota= (nota_1+nota_2+nota_3)/3
+     
+        notes_list.append(promedio_nota)
+       
     return students_list, notes_list
+
+
+
 
 def show_students(st_ls):
     for x in range (len(st_ls)):
@@ -36,7 +46,7 @@ while init!=0:
     option= int(input("digite la opción deseada: "))
 
     if option==1:
-        list_st_nt= create()
+        list_st_nt= create_students()
         
         st_ls= list_st_nt[0]
         nt_ls=list_st_nt[1]
